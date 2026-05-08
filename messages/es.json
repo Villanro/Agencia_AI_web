@@ -186,12 +186,26 @@
       "name": "Nombre",
       "email": "Correo Electrónico",
       "company": "Empresa",
+      "companyOptional": "Empresa (Opcional)",
       "service": "Servicio de Interés",
       "message": "Mensaje",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "correo@empresa.com",
+      "companyPlaceholder": "Tu empresa",
+      "servicePlaceholder": "Selecciona un servicio",
+      "messagePlaceholder": "¿En qué podemos ayudarte?",
       "submit": "Enviar Mensaje",
       "sending": "Enviando...",
       "success": "Mensaje enviado correctamente.",
-      "error": "Hubo un error al enviar el mensaje."
+      "error": "Hubo un error al enviar el mensaje.",
+      "sendAnother": "Enviar otro mensaje",
+      "successDescription": "Nos pondremos en contacto contigo pronto.",
+      "validation": {
+        "nameMin": "Mínimo 2 caracteres",
+        "emailInvalid": "Email inválido",
+        "serviceRequired": "Campo requerido",
+        "messageMin": "Mínimo 10 caracteres"
+      }
     },
     "services": {
       "automation": "Automatización",

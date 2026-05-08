@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -20,21 +20,19 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Send, CheckCircle2, XCircle } from 'lucide-react';
 
-// URL Placeholder - USER TO REPLACE
-const N8N_WEBHOOK_URL = "[INSERTAR_URL_WEBHOOK_N8N]";
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Mínimo 2 caracteres' }),
-  email: z.string().email({ message: 'Email inválido' }),
-  company: z.string().optional(),
-  service: z.string().min(1, { message: 'Campo requerido' }),
-  message: z.string().min(10, { message: 'Mínimo 10 caracteres' }),
-});
-
 export default function ContactForm() {
   const t = useTranslations('Contact');
+  const locale = useLocale();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const formSchema = z.object({
+    name: z.string().min(2, { message: t('form.validation.nameMin') }),
+    email: z.string().email({ message: t('form.validation.emailInvalid') }),
+    company: z.string().optional(),
+    service: z.string().min(1, { message: t('form.validation.serviceRequired') }),
+    message: z.string().min(10, { message: t('form.validation.messageMin') }),
+    website: z.string().optional(),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -44,6 +42,7 @@ export default function ContactForm() {
       company: '',
       service: '',
       message: '',
+      website: '',
     },
   });
 
@@ -52,12 +51,16 @@ export default function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch(N8N_WEBHOOK_URL, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          ...values,
+          locale,
+          source: 'website_contact_form',
+        }),
       });
 
       if (response.ok) {
@@ -109,15 +112,23 @@ export default function ContactForm() {
                   >
                     <CheckCircle2 className="w-16 h-16 text-green-500 mb-6" />
                     <h3 className="text-2xl font-bold mb-2">{t('form.success')}</h3>
-                    <p className="text-muted-foreground">Nos pondremos en contacto contigo pronto.</p>
+                    <p className="text-muted-foreground">{t('form.successDescription')}</p>
                     <Button onClick={() => setSubmitStatus('idle')} variant="outline" className="mt-8">
-                      Enviar otro mensaje
+                      {t('form.sendAnother')}
                     </Button>
                   </motion.div>
                 ) : (
                   <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                        <input
+                          type="text"
+                          tabIndex={-1}
+                          autoComplete="off"
+                          aria-hidden="true"
+                          className="absolute left-[-9999px] top-auto h-px w-px opacity-0"
+                          {...form.register('website')}
+                        />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <FormField
                             control={form.control}
@@ -126,7 +137,7 @@ export default function ContactForm() {
                               <FormItem>
                                 <FormLabel>{t('form.name')}</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="Tu nombre" className="bg-background/50" {...field} />
+                                  <Input placeholder={t('form.namePlaceholder')} className="bg-background/50" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -139,7 +150,7 @@ export default function ContactForm() {
                               <FormItem>
                                 <FormLabel>{t('form.email')}</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="correo@empresa.com" className="bg-background/50" {...field} />
+                                  <Input placeholder={t('form.emailPlaceholder')} className="bg-background/50" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -153,9 +164,9 @@ export default function ContactForm() {
                             name="company"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>{t('form.company')} (Opcional)</FormLabel>
+                                <FormLabel>{t('form.companyOptional')}</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="Tu empresa" className="bg-background/50" {...field} />
+                                  <Input placeholder={t('form.companyPlaceholder')} className="bg-background/50" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -172,7 +183,7 @@ export default function ContactForm() {
                                     className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                     {...field}
                                   >
-                                    <option value="" disabled>Selecciona un servicio</option>
+                                    <option value="" disabled>{t('form.servicePlaceholder')}</option>
                                     <option value="automation">{t('services.automation')}</option>
                                     <option value="ai">{t('services.ai')}</option>
                                     <option value="api">{t('services.api')}</option>
@@ -193,7 +204,7 @@ export default function ContactForm() {
                               <FormLabel>{t('form.message')}</FormLabel>
                               <FormControl>
                                 <Textarea 
-                                  placeholder="¿En qué podemos ayudarte?" 
+                                  placeholder={t('form.messagePlaceholder')} 
                                   className="min-h-[120px] bg-background/50" 
                                   {...field} 
                                 />
