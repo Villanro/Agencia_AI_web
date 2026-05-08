@@ -1,0 +1,213 @@
+{
+  "Navigation": {
+    "howItWorks": "Cómo funciona",
+    "services": "Servicios",
+    "successCases": "Casos de Éxito",
+    "testimonials": "Testimonios",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "contact": "Contactar"
+  },
+  "Hero": {
+    "badge": "El tiempo de tu equipo vale demasiado para malgastarlo",
+    "title": "Tu equipo pierde horas.",
+    "titleHighlight": "Nosotros se las devolvemos.",
+    "subtitle": "Cada semana tu equipo dedica horas a copiar datos, responder las mismas preguntas y generar reportes a mano. Eso tiene un coste real. Lo eliminamos — en menos de 3 semanas.",
+    "ctaTalk": "Descubre cuánto estás perdiendo",
+    "ctaServices": "Ver cómo funciona"
+  },
+  "TechStack": {
+    "label": "Tecnologías que dominamos"
+  },
+  "Stats": {
+    "items": {
+      "automations": { "value": "50", "suffix": "+", "label": "Procesos repetitivos eliminados" },
+      "hours": { "value": "1200", "suffix": "+", "label": "Horas devueltas a equipos" },
+      "clients": { "value": "20", "suffix": "+", "label": "Empresas que dejaron de perder tiempo" },
+      "weeks": { "value": "3", "suffix": "", "label": "Semanas hasta ver resultados" }
+    }
+  },
+  "HowItWorks": {
+    "badge": "El proceso",
+    "title": "De perder tiempo",
+    "titleHighlight": "a recuperarlo para siempre",
+    "cta": "Identifica qué está frenando a tu equipo — gratis",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Detectamos qué te está frenando",
+        "description": "En 30 minutos de auditoría gratuita identificamos exactamente qué tareas le están robando horas a tu equipo — y calculamos cuánto te está costando cada semana."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Eliminamos el problema de raíz",
+        "description": "Diseñamos e implementamos la solución que acaba con ese problema — sin que cambies tus herramientas ni necesites entender de tecnología."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Tu equipo nunca vuelve atrás",
+        "description": "Ponemos todo en marcha, formamos a tu equipo y nos quedamos contigo. Cuando algo cambia, lo adaptamos. Sin costes extra, sin sorpresas."
+      }
+    }
+  },
+  "Services": {
+    "title": "Problemas que resolvemos",
+    "items": {
+      "automation": {
+        "title": "Tu equipo copia datos a mano todo el día",
+        "description": "Conectamos tus herramientas para que la información fluya sola — sin errores, sin intermediarios, sin perder tiempo."
+      },
+      "agents": {
+        "title": "Pierdes clientes porque no puedes atender 24/7",
+        "description": "Agentes IA entrenados con tu negocio que atienden, califican y convierten — a cualquier hora, en cualquier canal."
+      },
+      "api": {
+        "title": "Tus plataformas no se hablan entre sí",
+        "description": "Integramos tus sistemas para que los datos viajen solos y tu equipo deje de ser el pegamento entre herramientas."
+      },
+      "consulting": {
+        "title": "No sabes por dónde empezar con la IA",
+        "description": "Te diseñamos una hoja de ruta clara para implementar IA donde más impacto tiene en tu negocio — sin tecnicismos, sin riesgos."
+      }
+    }
+  },
+  "SuccessCases": {
+    "title": "Problemas reales. Resultados reales.",
+    "cases": {
+      "case1": {
+        "title": "Agencia de Marketing",
+        "sector": "Marketing & Publicidad",
+        "metric": "40h",
+        "metricLabel": "al mes que el equipo ha dejado de perder",
+        "description": "El equipo perdía 10 horas semanales generando reportes a mano. Automatizamos todo el proceso con n8n y GPT-4o — ahora tarda minutos y llega al cliente sin que nadie lo toque."
+      },
+      "case2": {
+        "title": "E-commerce Local",
+        "sector": "Comercio electrónico",
+        "metric": "85%",
+        "metricLabel": "de consultas resueltas sin intervención humana",
+        "description": "Las consultas en WhatsApp se acumulaban y el equipo no daba abasto. Desplegamos un agente IA entrenado con el catálogo de la tienda — atiende 24/7 y solo escala lo que realmente necesita atención humana."
+      },
+      "case3": {
+        "title": "Startup SaaS",
+        "sector": "Software & Tecnología",
+        "metric": "3x",
+        "metricLabel": "mejora en conversión de trial a cliente",
+        "description": "Los usuarios de trial se iban sin convertir porque el onboarding era genérico y llegaba tarde. Automatizamos el flujo y lo personalizamos por perfil — la conversión se multiplicó por tres."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "items": {
+      "t1": {
+        "name": "María González",
+        "role": "CEO",
+        "company": "TechFlow Agency",
+        "text": "En dos semanas teníamos automatizado el 80% de nuestros reportes. Lo que antes ocupaba a dos personas un día entero ahora sucede solo, sin errores y a las 8am en el inbox del cliente. El ROI fue inmediato."
+      },
+      "t2": {
+        "name": "Carlos Ruiz",
+        "role": "Director de Operaciones",
+        "company": "DataCorp",
+        "text": "Llevábamos años hablando de automatizar el onboarding y nunca arrancábamos. The MKN lo hizo realidad en 3 semanas. El agente IA entiende el contexto de cada lead y personaliza cada interacción. Nuestra tasa de conversión subió un 40%."
+      },
+      "t3": {
+        "name": "Laura Martínez",
+        "role": "Fundadora",
+        "company": "EcoStore",
+        "text": "Tenía miedo de que fuera demasiado técnico para mi equipo, pero el proceso fue muy sencillo. Nos guiaron en cada paso, y ahora nuestro agente de WhatsApp resuelve el 85% de las consultas solo. Mi equipo por fin puede enfocarse en lo que importa."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "Planes y Precios",
+    "plans": {
+      "basic": {
+        "name": "Básico",
+        "price": "Desde 499€",
+        "features": ["1 Automatización simple", "Soporte email", "Mantenimiento mensual"],
+        "cta": "Empezar"
+      },
+      "pro": {
+        "name": "Profesional",
+        "price": "Desde 1,499€",
+        "features": ["Hasta 5 automatizaciones", "1 Agente IA básico", "Soporte prioritario", "Integraciones API"],
+        "cta": "Más popular"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "A medida",
+        "features": ["Automatizaciones ilimitadas", "Múltiples Agentes IA", "Infraestructura dedicada", "Soporte 24/7"],
+        "cta": "Contactar"
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Preguntas Frecuentes",
+    "items": {
+      "q1": {
+        "q": "¿Cuánto tiempo tarda una implementación?",
+        "a": "La mayoría de proyectos están en producción en 2 a 3 semanas. Empezamos con una auditoría gratuita (30 min), definimos el alcance en la primera semana, y entregamos en la segunda o tercera. Para proyectos más complejos con múltiples agentes o integraciones, el plazo puede extenderse a 4-6 semanas."
+      },
+      "q2": {
+        "q": "¿Necesito saber de tecnología o de IA para trabajar con vosotros?",
+        "a": "Para nada. Nuestro trabajo es traducir tus necesidades de negocio a soluciones técnicas. Solo necesitas conocer bien tu proceso — nosotros nos encargamos del resto. Muchos de nuestros clientes no tienen equipo técnico interno."
+      },
+      "q3": {
+        "q": "¿Mis datos están seguros? ¿Cumplís con el RGPD?",
+        "a": "Sí. Trabajamos con infraestructuras con cifrado en tránsito y en reposo, y nunca usamos tus datos para entrenar modelos externos. Todos los proyectos se diseñan con cumplimiento RGPD por defecto. Si operas en sectores regulados (salud, finanzas, legal), te indicamos las salvaguardas adicionales necesarias."
+      },
+      "q4": {
+        "q": "¿Cómo sé si mi negocio está listo para la IA?",
+        "a": "Si tienes tareas que se repiten más de 3 veces a la semana, procesos que dependen de copiar datos entre herramientas, o tu equipo dedica horas a responder siempre las mismas preguntas — estás listo. La auditoría gratuita sirve exactamente para identificar dónde la IA tiene mayor impacto en tu caso concreto."
+      },
+      "q5": {
+        "q": "¿Qué pasa si algo deja de funcionar después de la entrega?",
+        "a": "Todos nuestros proyectos incluyen un periodo de garantía post-entrega. Si algo falla por nuestra parte, lo arreglamos sin coste adicional. Además, ofrecemos planes de mantenimiento mensual para que tus automatizaciones evolucionen con tu negocio y con los cambios de las plataformas que usas."
+      },
+      "q6": {
+        "q": "¿La IA va a reemplazar a mis empleados?",
+        "a": "No es el objetivo. La IA elimina el trabajo mecánico y repetitivo — los reportes, el copy-paste, las respuestas estándar — para que tu equipo pueda dedicarse a lo que realmente aporta valor: relaciones con clientes, estrategia, creatividad. Nuestros clientes no despiden a nadie; sus equipos simplemente dejan de hacer el trabajo más frustrante."
+      },
+      "q7": {
+        "q": "¿Cuánto me está costando NO automatizar?",
+        "a": "Más de lo que crees. Si una tarea repetitiva le ocupa 5 horas semanales a alguien que cobra 20€/h, son 400€/mes — casi 5.000€ al año — en trabajo que una automatización hace sola. Y eso sin contar errores, retrasos y oportunidades perdidas por falta de tiempo. Los proyectos parten desde 499€, y el retorno suele verse en el primer mes. En la auditoría calculamos juntos el coste real de no actuar, antes de que decidas nada."
+      },
+      "q8": {
+        "q": "¿Qué herramientas y plataformas usáis?",
+        "a": "Trabajamos con las herramientas líderes del sector: n8n y Make para automatizaciones, OpenAI y Claude para agentes conversacionales e inteligencia, Supabase y Airtable para datos, y WhatsApp Business API, HubSpot o Slack para integraciones. Nos adaptamos al stack que ya uses — no te obligamos a cambiar lo que funciona."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contacta con nosotros",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "company": "Empresa",
+      "service": "Servicio de Interés",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "Mensaje enviado correctamente.",
+      "error": "Hubo un error al enviar el mensaje."
+    },
+    "services": {
+      "automation": "Automatización",
+      "ai": "Agentes IA",
+      "api": "Integraciones API",
+      "consulting": "Consultoría"
+    }
+  },
+  "Footer": {
+    "tagline": "Recuperamos el tiempo que tu equipo pierde en tareas repetitivas — con IA y automatización a medida.",
+    "nav": "Navegación",
+    "legal": "Legal",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Aviso Legal",
+    "cookies": "Política de Cookies",
+    "rights": "© 2025 The MKN. Todos los derechos reservados."
+  }
+}

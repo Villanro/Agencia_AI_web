@@ -1,0 +1,213 @@
+{
+  "Navigation": {
+    "howItWorks": "How it works",
+    "services": "Services",
+    "successCases": "Success Cases",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Your team's time is too valuable to waste",
+    "title": "Your team is losing hours.",
+    "titleHighlight": "We give them back.",
+    "subtitle": "Every week your team spends hours copying data, answering the same questions, and generating reports by hand. That has a real cost. We eliminate it — in under 3 weeks.",
+    "ctaTalk": "Find out what you're losing",
+    "ctaServices": "See how it works"
+  },
+  "TechStack": {
+    "label": "Technologies we master"
+  },
+  "Stats": {
+    "items": {
+      "automations": { "value": "50", "suffix": "+", "label": "Repetitive processes eliminated" },
+      "hours": { "value": "1200", "suffix": "+", "label": "Hours returned to teams" },
+      "clients": { "value": "20", "suffix": "+", "label": "Businesses that stopped wasting time" },
+      "weeks": { "value": "3", "suffix": "", "label": "Weeks to see results" }
+    }
+  },
+  "HowItWorks": {
+    "badge": "The process",
+    "title": "From wasting time",
+    "titleHighlight": "to getting it back for good",
+    "cta": "Identify what's holding your team back — free",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "We find what's slowing you down",
+        "description": "In a 30-minute free audit we pinpoint exactly which tasks are stealing hours from your team — and calculate what it's costing you every week."
+      },
+      "step2": {
+        "number": "02",
+        "title": "We eliminate the problem at its root",
+        "description": "We design and implement the solution that ends the problem — without changing your tools or requiring any technical knowledge on your end."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Your team never goes back",
+        "description": "We go live, train your team and stay with you. When things change, we adapt. No extra costs, no surprises."
+      }
+    }
+  },
+  "Services": {
+    "title": "Problems we solve",
+    "items": {
+      "automation": {
+        "title": "Your team copies data manually all day",
+        "description": "We connect your tools so information flows on its own — no errors, no middlemen, no time wasted."
+      },
+      "agents": {
+        "title": "You're losing clients because you can't respond 24/7",
+        "description": "AI agents trained on your business that attend, qualify and convert — any time, on any channel."
+      },
+      "api": {
+        "title": "Your platforms don't talk to each other",
+        "description": "We integrate your systems so data moves on its own and your team stops being the glue between tools."
+      },
+      "consulting": {
+        "title": "You don't know where to start with AI",
+        "description": "We build you a clear roadmap to implement AI where it has the most impact in your specific business — no jargon, no risk."
+      }
+    }
+  },
+  "SuccessCases": {
+    "title": "Real problems. Real results.",
+    "cases": {
+      "case1": {
+        "title": "Marketing Agency",
+        "sector": "Marketing & Advertising",
+        "metric": "40h",
+        "metricLabel": "per month the team stopped wasting",
+        "description": "The team was losing 10 hours a week generating reports by hand. We automated the entire process with n8n and GPT-4o — it now takes minutes and reaches the client without anyone touching it."
+      },
+      "case2": {
+        "title": "Local E-commerce",
+        "sector": "E-commerce",
+        "metric": "85%",
+        "metricLabel": "of queries resolved without human intervention",
+        "description": "WhatsApp queries were piling up and the team couldn't keep up. We deployed an AI agent trained on the store's catalog — it handles everything 24/7 and only escalates what truly needs a human."
+      },
+      "case3": {
+        "title": "SaaS Startup",
+        "sector": "Software & Technology",
+        "metric": "3x",
+        "metricLabel": "improvement in trial-to-paid conversion",
+        "description": "Trial users were leaving without converting because onboarding was generic and late. We automated the flow and personalized it by profile — conversion tripled."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "What our clients say",
+    "items": {
+      "t1": {
+        "name": "María González",
+        "role": "CEO",
+        "company": "TechFlow Agency",
+        "text": "Within two weeks we had 80% of our reports automated. What used to take two people a full day now happens on its own, error-free, at 8am in the client's inbox. The ROI was immediate."
+      },
+      "t2": {
+        "name": "Carlos Ruiz",
+        "role": "Operations Director",
+        "company": "DataCorp",
+        "text": "We'd been talking about automating onboarding for years and never got started. The MKN made it happen in 3 weeks. The AI agent understands each lead's context and personalizes every interaction. Our conversion rate went up 40%."
+      },
+      "t3": {
+        "name": "Laura Martínez",
+        "role": "Founder",
+        "company": "EcoStore",
+        "text": "I was worried it would be too technical for my team, but the process was very smooth. They guided us every step of the way, and now our WhatsApp agent resolves 85% of queries on its own. My team can finally focus on what matters."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "Plans & Pricing",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "price": "From €499",
+        "features": ["1 Simple automation", "Email support", "Monthly maintenance"],
+        "cta": "Get Started"
+      },
+      "pro": {
+        "name": "Professional",
+        "price": "From €1,499",
+        "features": ["Up to 5 automations", "1 Basic AI Agent", "Priority support", "API Integrations"],
+        "cta": "Most Popular"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "features": ["Unlimited automations", "Multiple AI Agents", "Dedicated infrastructure", "24/7 Support"],
+        "cta": "Contact Us"
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "q1": {
+        "q": "How long does an implementation take?",
+        "a": "Most projects are live within 2 to 3 weeks. We start with a free audit (30 min), define the scope in week one, and deliver in week two or three. For more complex projects with multiple agents or integrations, timelines can extend to 4-6 weeks."
+      },
+      "q2": {
+        "q": "Do I need technical or AI knowledge to work with you?",
+        "a": "Not at all. Our job is to translate your business needs into technical solutions. You just need to know your process well — we handle the rest. Many of our clients have no internal tech team."
+      },
+      "q3": {
+        "q": "Is my data safe? Do you comply with GDPR?",
+        "a": "Yes. We work with infrastructure that uses encryption in transit and at rest, and we never use your data to train external models. All projects are designed with GDPR compliance by default. If you operate in regulated sectors (health, finance, legal), we'll outline the additional safeguards required."
+      },
+      "q4": {
+        "q": "How do I know if my business is ready for AI?",
+        "a": "If you have tasks that repeat more than 3 times a week, processes that depend on copying data between tools, or your team spends hours answering the same questions — you're ready. The free audit is designed to identify exactly where AI has the most impact in your specific case."
+      },
+      "q5": {
+        "q": "What happens if something stops working after delivery?",
+        "a": "All our projects include a post-delivery warranty period. If something fails on our end, we fix it at no extra cost. We also offer monthly maintenance plans so your automations evolve with your business and with changes to the platforms you use."
+      },
+      "q6": {
+        "q": "Will AI replace my employees?",
+        "a": "That's not the goal. AI eliminates mechanical, repetitive work — reports, copy-paste, standard replies — so your team can focus on what truly adds value: client relationships, strategy, creativity. Our clients don't let anyone go; their teams simply stop doing the most frustrating work."
+      },
+      "q7": {
+        "q": "What is NOT automating actually costing me?",
+        "a": "More than you think. If a repetitive task takes 5 hours a week for someone earning €20/h, that's €400/month — nearly €5,000/year — in work an automation does by itself. And that doesn't count errors, delays, and opportunities lost because your team has no time. Projects start from €499, and ROI is usually visible in the first month. In the audit we calculate the real cost of inaction together, before you decide anything."
+      },
+      "q8": {
+        "q": "What tools and platforms do you use?",
+        "a": "We work with the leading tools in the industry: n8n and Make for automations, OpenAI and Claude for conversational agents, Supabase and Airtable for data, and WhatsApp Business API, HubSpot or Slack for integrations. We adapt to your existing stack — we don't force you to change what works."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "service": "Service of Interest",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully.",
+      "error": "There was an error sending the message."
+    },
+    "services": {
+      "automation": "Automation",
+      "ai": "AI Agents",
+      "api": "API Integrations",
+      "consulting": "Consulting"
+    }
+  },
+  "Footer": {
+    "tagline": "We recover the time your team wastes on repetitive tasks — with custom AI and automation.",
+    "nav": "Navigation",
+    "legal": "Legal",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Legal Notice",
+    "cookies": "Cookie Policy",
+    "rights": "© 2025 The MKN. All rights reserved."
+  }
+}
