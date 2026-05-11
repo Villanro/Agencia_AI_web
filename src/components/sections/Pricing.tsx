@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -14,7 +14,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -22,7 +22,7 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">{t('title')}</h2>
-        </motion.div>
+        </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {planKeys.map((key, index) => {
@@ -31,7 +31,7 @@ export default function Pricing() {
             const features = t.raw(`plans.${key}.features`) as string[];
 
             return (
-              <motion.div
+              <m.div
                 key={key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Pricing() {
                     </Link>
                   </CardFooter>
                 </Card>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

@@ -4,6 +4,7 @@ import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import type { Metadata } from 'next';
 import '../globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import MotionProvider from '@/components/MotionProvider';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/layout/ScrollProgress';
@@ -79,12 +80,14 @@ export default async function LocaleLayout({
       <body className={`${inter.className} ${plusJakarta.variable} min-h-screen bg-background antialiased flex flex-col`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-            <ScrollProgress />
-            <Navbar />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
+            <MotionProvider>
+              <ScrollProgress />
+              <Navbar />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </MotionProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

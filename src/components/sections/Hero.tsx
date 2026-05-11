@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { m, useScroll, useTransform } from 'framer-motion';
 import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 export default function Hero() {
@@ -21,17 +21,17 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Fondo con parallax — se mueve más lento que el contenido */}
-      <motion.div
+      <m.div
         style={{ y: bgY }}
         className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/25 via-background to-background"
       />
       {/* Patrón de puntos */}
       <div className="absolute inset-0 dot-grid z-0 pointer-events-none opacity-50" />
 
-      <motion.div style={{ y: contentY, opacity }} className="container relative z-10 mx-auto px-6 text-center max-w-4xl">
+      <m.div style={{ y: contentY, opacity }} className="container relative z-10 mx-auto px-6 text-center max-w-4xl">
 
         {/* Título con parte resaltada */}
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
@@ -39,20 +39,20 @@ export default function Hero() {
         >
           {t('title')}{' '}
           <span className="text-primary">{t('titleHighlight')}</span>
-        </motion.h1>
+        </m.h1>
 
         {/* Subtítulo */}
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
           {t('subtitle')}
-        </motion.p>
+        </m.p>
 
         {/* CTAs */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -64,9 +64,9 @@ export default function Hero() {
           <Link href="#services" className={buttonVariants({ size: "lg", variant: "outline", className: "w-full sm:w-auto" })}>
             {t('ctaServices')}
           </Link>
-        </motion.div>
+        </m.div>
 
-      </motion.div>
+      </m.div>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Star } from 'lucide-react';
 
 function Stars() {
@@ -22,7 +22,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-24 bg-secondary/20">
       <div className="container mx-auto px-6">
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -32,11 +32,11 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">
             {t('title')}
           </h2>
-        </motion.div>
+        </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((key, index) => (
-            <motion.div
+            <m.div
               key={key}
               initial={{ opacity: 0, y: 30, scale: 0.97 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -67,7 +67,7 @@ export default function Testimonials() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

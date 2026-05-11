@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
+import { m, useInView, useMotionValue, useSpring } from 'framer-motion';
 
 function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -32,7 +32,7 @@ export default function Stats() {
       <div className="container mx-auto px-6">
         <div className="border-t border-b border-border/20 py-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {statKeys.map((key, index) => (
-            <motion.div
+            <m.div
               key={key}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -49,7 +49,7 @@ export default function Stats() {
               <p className="text-xs text-muted-foreground/60 uppercase tracking-widest leading-relaxed">
                 {t(`items.${key}.label`)}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

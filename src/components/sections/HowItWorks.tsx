@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 const stepKeys = ['step1', 'step2', 'step3'] as const;
@@ -14,7 +14,7 @@ export default function HowItWorks() {
       <div className="container mx-auto px-6">
 
         {/* Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,7 +25,7 @@ export default function HowItWorks() {
             {t('title')}{' '}
             <span className="text-primary">{t('titleHighlight')}</span>
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* Steps */}
         <div className="relative">
@@ -34,7 +34,7 @@ export default function HowItWorks() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
             {stepKeys.map((key, index) => (
-              <motion.div
+              <m.div
                 key={key}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function HowItWorks() {
                   </div>
                   {/* Pulso animado en el primer paso */}
                   {index === 0 && (
-                    <motion.div
+                    <m.div
                       animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0, 0.4] }}
                       transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
                       className="absolute inset-0 rounded-full border border-primary/40"
@@ -63,13 +63,13 @@ export default function HowItWorks() {
                 <p className="text-muted-foreground leading-relaxed max-w-xs">
                   {t(`steps.${key}.description`)}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
 
         {/* CTA */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,7 +82,7 @@ export default function HowItWorks() {
           >
             {t('cta')}
           </Link>
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

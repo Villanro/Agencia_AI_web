@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const tools = [
   'OpenAI', 'Claude', 'n8n', 'Make', 'LangChain',
@@ -23,7 +23,7 @@ export default function TechStack() {
   return (
     <section className="py-14 border-y border-border/30 overflow-hidden relative">
       <div className="container mx-auto px-6 mb-8">
-        <motion.p
+        <m.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -31,7 +31,7 @@ export default function TechStack() {
           className="text-center text-xs font-semibold text-muted-foreground/60 uppercase tracking-[0.2em]"
         >
           {t('label')}
-        </motion.p>
+        </m.p>
       </div>
 
       {/* Una sola fila de marquee */}
