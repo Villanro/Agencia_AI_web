@@ -31,7 +31,6 @@ export default function ContactForm() {
     company: z.string().optional(),
     service: z.string().min(1, { message: t('form.validation.serviceRequired') }),
     message: z.string().min(10, { message: t('form.validation.messageMin') }),
-    website: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -42,7 +41,6 @@ export default function ContactForm() {
       company: '',
       service: '',
       message: '',
-      website: '',
     },
   });
 
@@ -59,7 +57,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           ...values,
           locale,
-          source: 'website_contact_form',
+          source: 'web',
         }),
       });
 
@@ -121,14 +119,6 @@ export default function ContactForm() {
                   <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                        <input
-                          type="text"
-                          tabIndex={-1}
-                          autoComplete="off"
-                          aria-hidden="true"
-                          className="absolute left-[-9999px] top-auto h-px w-px opacity-0"
-                          {...form.register('website')}
-                        />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <FormField
                             control={form.control}

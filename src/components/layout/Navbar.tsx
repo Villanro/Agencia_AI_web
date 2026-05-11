@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { buttonVariants } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from '@/components/layout/ThemeToggle';
 
 export default function Navbar() {
   const t = useTranslations('Navigation');
@@ -57,6 +58,7 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <div className="flex bg-secondary rounded-md p-1">
             <button 
               onClick={() => switchLanguage('es')}
@@ -84,7 +86,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/5 py-4 px-6 flex flex-col gap-4 shadow-xl">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border py-4 px-6 flex flex-col gap-4 shadow-xl">
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
@@ -97,9 +99,10 @@ export default function Navbar() {
           ))}
           <div className="h-px bg-border my-2" />
           <div className="flex items-center justify-between">
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
               <button onClick={() => { switchLanguage('es'); setIsMobileMenuOpen(false); }} className={`px-3 py-1 text-sm font-bold rounded-md ${locale === 'es' ? 'bg-secondary text-foreground' : 'text-muted-foreground'}`}>ES</button>
               <button onClick={() => { switchLanguage('en'); setIsMobileMenuOpen(false); }} className={`px-3 py-1 text-sm font-bold rounded-md ${locale === 'en' ? 'bg-secondary text-foreground' : 'text-muted-foreground'}`}>EN</button>
+              <ThemeToggle />
             </div>
             <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className={buttonVariants({ variant: "default" })}>
               {t('contact')}
