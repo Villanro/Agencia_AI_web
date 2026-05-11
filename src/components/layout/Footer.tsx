@@ -140,12 +140,9 @@ export default function Footer() {
         </div>
 
         {/* Barra inferior */}
-        <div className="pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground/60">
-            {t('Footer.rights')}
-          </p>
-          <p className="text-xs text-muted-foreground/40">
-            Hecho con IA · Desplegado con 🤍
+        <div className="pt-8 border-t border-border/40">
+          <p className="text-xs text-muted-foreground/60 text-center">
+            © {new Date().getFullYear()} {t('Footer.rights')}
           </p>
         </div>
 
