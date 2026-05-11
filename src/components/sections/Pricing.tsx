@@ -52,8 +52,8 @@ export default function Pricing() {
                   </CardHeader>
                   <CardContent className="flex-1 mt-6">
                     <ul className="space-y-4">
-                      {features?.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-3">
+                      {features?.map((feature) => (
+                        <li key={feature} className="flex items-center gap-3">
                           <Check className="size-5 text-primary flex-shrink-0" />
                           <span className="text-muted-foreground text-sm">{feature}</span>
                         </li>

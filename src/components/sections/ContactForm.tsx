@@ -214,7 +214,7 @@ export default function ContactForm() {
                         <Button type="submit" className="w-full h-12 text-lg" disabled={isSubmitting}>
                           {isSubmitting ? (
                             <span className="flex items-center gap-2">
-                              <span className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></span>
+                              <span className="animate-spin rounded-full size-4 border-b-2 border-white"></span>
                               {t('form.sending')}
                             </span>
                           ) : (
