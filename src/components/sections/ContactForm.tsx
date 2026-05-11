@@ -88,7 +88,7 @@ export default function ContactForm() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">{t('title')}</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter">{t('title')}</h2>
         </m.div>
 
         <m.div
@@ -108,8 +108,8 @@ export default function ContactForm() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center justify-center py-12 text-center"
                   >
-                    <CheckCircle2 className="w-16 h-16 text-green-500 mb-6" />
-                    <h3 className="text-2xl font-bold mb-2">{t('form.success')}</h3>
+                    <CheckCircle2 className="size-16 text-green-500 mb-6" />
+                    <h3 className="text-2xl font-semibold mb-2">{t('form.success')}</h3>
                     <p className="text-muted-foreground">{t('form.successDescription')}</p>
                     <Button onClick={() => setSubmitStatus('idle')} variant="outline" className="mt-8">
                       {t('form.sendAnother')}
@@ -206,7 +206,7 @@ export default function ContactForm() {
 
                         {submitStatus === 'error' && (
                           <div className="flex items-center gap-2 text-destructive bg-destructive/10 p-3 rounded-md">
-                            <XCircle className="w-5 h-5" />
+                            <XCircle className="size-5" />
                             <p className="text-sm">{t('form.error')}</p>
                           </div>
                         )}
@@ -219,7 +219,7 @@ export default function ContactForm() {
                             </span>
                           ) : (
                             <span className="flex items-center gap-2">
-                              {t('form.submit')} <Send className="w-4 h-4" />
+                              {t('form.submit')} <Send className="size-4" />
                             </span>
                           )}
                         </Button>

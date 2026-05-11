@@ -20,7 +20,7 @@ export default function CookiesPage({ params }: LocalePageProps) {
 
   return (
     <section className="container mx-auto px-6 py-24 max-w-4xl">
-      <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-6">
+      <h1 className="text-3xl md:text-5xl font-semibold tracking-tighter mb-6">
         {isEn ? 'Cookie Policy' : 'Politica de Cookies'}
       </h1>
 

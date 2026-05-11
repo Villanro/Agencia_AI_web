@@ -8,7 +8,7 @@ function Stars() {
   return (
     <div className="flex gap-1">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+        <Star key={i} className="size-4 fill-primary text-primary" />
       ))}
     </div>
   );
@@ -29,7 +29,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter">
             {t('title')}
           </h2>
         </m.div>
@@ -57,7 +57,7 @@ export default function Testimonials() {
 
               {/* Autor */}
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-full bg-primary/15 border border-primary/20 flex items-center justify-center text-primary font-bold text-base flex-shrink-0">
+                <div className="size-11 rounded-full bg-primary/15 border border-primary/20 flex items-center justify-center text-primary font-bold text-base flex-shrink-0">
                   {t(`items.${key}.name`).charAt(0)}
                 </div>
                 <div>

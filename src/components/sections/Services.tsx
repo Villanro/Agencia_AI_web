@@ -6,10 +6,10 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Settings, Bot, Webhook, Lightbulb } from 'lucide-react';
 
 const icons = {
-  automation: <Settings className="w-8 h-8 text-primary" />,
-  agents: <Bot className="w-8 h-8 text-primary" />,
-  api: <Webhook className="w-8 h-8 text-primary" />,
-  consulting: <Lightbulb className="w-8 h-8 text-primary" />
+  automation: <Settings className="size-8 text-primary" />,
+  agents: <Bot className="size-8 text-primary" />,
+  api: <Webhook className="size-8 text-primary" />,
+  consulting: <Lightbulb className="size-8 text-primary" />
 };
 
 export default function Services() {
@@ -26,7 +26,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">{t('title')}</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter">{t('title')}</h2>
         </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -46,7 +46,7 @@ export default function Services() {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.15 + 0.2 }}
-                    className="mb-4 bg-background w-16 h-16 rounded-full flex items-center justify-center"
+                    className="mb-4 bg-background size-16 rounded-full flex items-center justify-center"
                   >
                     {icons[key]}
                   </m.div>

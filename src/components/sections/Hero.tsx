@@ -35,7 +35,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight"
+          className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 leading-tight"
         >
           {t('title')}{' '}
           <span className="text-primary">{t('titleHighlight')}</span>

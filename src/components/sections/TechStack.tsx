@@ -37,7 +37,7 @@ export default function TechStack() {
       {/* Una sola fila de marquee */}
       <div className="flex gap-3 animate-marquee-left w-max">
         {[...tools, ...tools].map((name, i) => (
-          <ToolBadge key={i} name={name} />
+          <ToolBadge key={`${name}-${i}`} name={name} />
         ))}
       </div>
 

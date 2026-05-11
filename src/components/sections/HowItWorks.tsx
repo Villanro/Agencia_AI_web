@@ -21,7 +21,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter">
             {t('title')}{' '}
             <span className="text-primary">{t('titleHighlight')}</span>
           </h2>
@@ -44,7 +44,7 @@ export default function HowItWorks() {
               >
                 {/* Número con círculo */}
                 <div className="relative mb-8">
-                  <div className="w-28 h-28 rounded-full bg-background border border-primary/20 flex items-center justify-center shadow-lg shadow-primary/5">
+                  <div className="size-28 rounded-full bg-background border border-primary/20 flex items-center justify-center shadow-lg shadow-primary/5">
                     <span className="text-4xl font-bold text-primary/30 select-none">
                       {t(`steps.${key}.number`)}
                     </span>
@@ -59,7 +59,7 @@ export default function HowItWorks() {
                   )}
                 </div>
 
-                <h3 className="text-xl font-bold mb-3">{t(`steps.${key}.title`)}</h3>
+                <h3 className="text-xl font-semibold mb-3">{t(`steps.${key}.title`)}</h3>
                 <p className="text-muted-foreground leading-relaxed max-w-xs">
                   {t(`steps.${key}.description`)}
                 </p>

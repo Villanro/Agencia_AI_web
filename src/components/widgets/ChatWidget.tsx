@@ -88,19 +88,19 @@ export default function ChatWidget() {
             {/* Header */}
             <div className="bg-secondary p-4 border-b border-white/5 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-primary" />
+                <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Bot className="size-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">Asistente The MKN</h3>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
                     <span className="text-xs text-muted-foreground">Online</span>
                   </div>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors">
-                <X className="w-5 h-5" />
+                <X className="size-5" />
               </button>
             </div>
 
@@ -108,8 +108,8 @@ export default function ChatWidget() {
             <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-secondary/10">
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : ''}`}>
-                  <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-secondary">
-                    {msg.role === 'user' ? <User className="w-4 h-4 text-muted-foreground" /> : <Bot className="w-4 h-4 text-primary" />}
+                  <div className="size-8 rounded-full flex-shrink-0 flex items-center justify-center bg-secondary">
+                    {msg.role === 'user' ? <User className="size-4 text-muted-foreground" /> : <Bot className="size-4 text-primary" />}
                   </div>
                   <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-primary text-primary-foreground rounded-tr-sm' : 'bg-secondary rounded-tl-sm'}`}>
                     {msg.content}
@@ -118,13 +118,13 @@ export default function ChatWidget() {
               ))}
               {isLoading && (
                 <div className="flex gap-3 max-w-[85%]">
-                  <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-secondary">
-                    <Bot className="w-4 h-4 text-primary" />
+                  <div className="size-8 rounded-full flex-shrink-0 flex items-center justify-center bg-secondary">
+                    <Bot className="size-4 text-primary" />
                   </div>
                   <div className="p-4 rounded-2xl bg-secondary rounded-tl-sm flex gap-1">
-                    <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></span>
-                    <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
-                    <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+                    <span className="size-2 bg-muted-foreground rounded-full animate-bounce"></span>
+                    <span className="size-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+                    <span className="size-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
                   </div>
                 </div>
               )}
@@ -142,7 +142,7 @@ export default function ChatWidget() {
                   disabled={isLoading}
                 />
                 <Button type="submit" size="icon" disabled={!input.trim() || isLoading}>
-                  <Send className="w-4 h-4" />
+                  <Send className="size-4" />
                 </Button>
               </form>
             </div>
@@ -155,9 +155,9 @@ export default function ChatWidget() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-xl flex items-center justify-center z-50 hover:bg-primary/90 transition-colors"
+        className="fixed bottom-6 right-6 size-14 bg-primary text-primary-foreground rounded-full shadow-xl flex items-center justify-center z-50 hover:bg-primary/90 transition-colors"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
+        {isOpen ? <X className="size-6" /> : <MessageSquare className="size-6" />}
       </m.button>
     </>
   );

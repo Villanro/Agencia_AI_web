@@ -21,7 +21,7 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">{t('title')}</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter">{t('title')}</h2>
         </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -54,7 +54,7 @@ export default function Pricing() {
                     <ul className="space-y-4">
                       {features?.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3">
-                          <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                          <Check className="size-5 text-primary flex-shrink-0" />
                           <span className="text-muted-foreground text-sm">{feature}</span>
                         </li>
                       ))}

@@ -23,7 +23,7 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">{t('title')}</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter">{t('title')}</h2>
         </m.div>
 
         <m.div
