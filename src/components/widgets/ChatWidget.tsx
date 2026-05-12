@@ -6,7 +6,6 @@ import { MessageSquare, X, Send, Bot, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-
 type Message = {
   id: string;
   role: 'user' | 'assistant';
@@ -16,13 +15,12 @@ type Message = {
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', role: 'assistant', content: '¡Hola! Soy el asistente IA de The MKN. ¿En qué te puedo ayudar hoy?' }
+    { id: '1', role: 'assistant', content: '¡Hola! Soy Nova, el asistente de The MKN 👋 ¿Qué tarea le está robando más tiempo a tu equipo?' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll al último mensaje
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
@@ -44,16 +42,14 @@ export default function ChatWidget() {
         },
         body: JSON.stringify({
           message: userMsg.content,
-          history: messages.slice(-5) // Enviar últimos 5 mensajes para contexto (opcional)
+          history: messages.slice(-5)
         }),
       });
 
       if (response.ok) {
         const data = await response.json();
-        // Asumiendo que n8n devuelve { "reply": "texto de respuesta" }
-        // Si la estructura es diferente, el usuario deberá adaptar esto:
         const replyContent = data.reply || data.output || data.message || "Recibido. Estamos procesando tu solicitud.";
-        
+
         setMessages(prev => [...prev, {
           id: (Date.now() + 1).toString(),
           role: 'assistant',
@@ -92,7 +88,7 @@ export default function ChatWidget() {
                   <Bot className="size-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">Asistente The MKN</h3>
+                  <h3 className="font-semibold text-sm">Nova — The MKN</h3>
                   <div className="flex items-center gap-1.5">
                     <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
                     <span className="text-xs text-muted-foreground">Online</span>
@@ -134,10 +130,10 @@ export default function ChatWidget() {
             {/* Input area */}
             <div className="p-4 bg-background border-t border-white/5">
               <form onSubmit={handleSendMessage} className="flex gap-2">
-                <Input 
+                <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Escribe tu mensaje..." 
+                  placeholder="Escribe tu mensaje..."
                   className="bg-secondary/50 border-none focus-visible:ring-1 focus-visible:ring-primary"
                   disabled={isLoading}
                 />
