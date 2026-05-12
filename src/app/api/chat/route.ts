@@ -32,10 +32,11 @@ export async function POST(req: NextRequest) {
     const data = await upstream.json();
     return NextResponse.json(data);
 
-  } catch (err: any) {
+  } catch (err) {
+    const error = err as { name?: string };
     console.error('[chat proxy]', err);
 
-    if (err?.name === 'AbortError') {
+    if (error?.name === 'AbortError') {
       return NextResponse.json(
         { reply: 'Nova está tardando más de lo habitual. Por favor, inténtalo de nuevo en unos segundos.' },
         { status: 200 }
