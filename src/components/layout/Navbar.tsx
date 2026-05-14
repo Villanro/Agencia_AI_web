@@ -34,7 +34,6 @@ export default function Navbar() {
     { href: '#how', label: t('howItWorks') },
     { href: '#services', label: t('services') },
     { href: '#cases', label: t('successCases') },
-    { href: '#testimonials', label: t('testimonials') },
     { href: '#pricing', label: t('pricing') },
     { href: '#faq', label: t('faq') },
   ];
