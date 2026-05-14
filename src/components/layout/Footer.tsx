@@ -46,12 +46,11 @@ export default function Footer() {
   const locale = useLocale();
 
   const navLinks = [
-    { href: '#how',          label: t('Navigation.howItWorks') },
-    { href: '#services',     label: t('Navigation.services') },
-    { href: '#cases',        label: t('Navigation.successCases') },
-    { href: '#pricing',      label: t('Navigation.pricing') },
-    { href: '#faq',          label: t('Navigation.faq') },
-    { href: '#contact',      label: t('Navigation.contact') },
+    { href: '#how',      label: t('Navigation.howItWorks') },
+    { href: '#services', label: t('Navigation.services') },
+    { href: '#roi',      label: 'ROI' },
+    { href: '#faq',      label: t('Navigation.faq') },
+    { href: '#contact',  label: t('Navigation.contact') },
   ];
 
   const legalLinks = [
