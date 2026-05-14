@@ -4,7 +4,6 @@ import Stats from '@/components/sections/Stats';
 import HowItWorks from '@/components/sections/HowItWorks';
 import Services from '@/components/sections/Services';
 import SuccessCases from '@/components/sections/SuccessCases';
-import Testimonials from '@/components/sections/Testimonials';
 import Pricing from '@/components/sections/Pricing';
 import FAQ from '@/components/sections/FAQ';
 import ContactForm from '@/components/sections/ContactForm';
@@ -18,7 +17,6 @@ export default async function Home() {
       <HowItWorks />
       <Services />
       <SuccessCases />
-      <Testimonials />
       <Pricing />
       <FAQ />
       <ContactForm />
