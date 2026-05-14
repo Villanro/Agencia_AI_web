@@ -3,8 +3,7 @@ import TechStack from '@/components/sections/TechStack';
 import Stats from '@/components/sections/Stats';
 import HowItWorks from '@/components/sections/HowItWorks';
 import Services from '@/components/sections/Services';
-import SuccessCases from '@/components/sections/SuccessCases';
-import Pricing from '@/components/sections/Pricing';
+import RoiSector from '@/components/sections/RoiSector';
 import FAQ from '@/components/sections/FAQ';
 import ContactForm from '@/components/sections/ContactForm';
 import ChatWidget from '@/components/widgets/ChatWidget';
@@ -16,8 +15,7 @@ export default async function Home() {
       <Stats />
       <HowItWorks />
       <Services />
-      <SuccessCases />
-      <Pricing />
+      <RoiSector />
       <FAQ />
       <ContactForm />
       <TechStack />

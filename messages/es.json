@@ -21,10 +21,10 @@
   },
   "Stats": {
     "items": {
-      "automations": { "value": "50", "suffix": "+", "label": "Procesos repetitivos eliminados" },
-      "hours": { "value": "1200", "suffix": "+", "label": "Horas devueltas a equipos" },
-      "clients": { "value": "20", "suffix": "+", "label": "Empresas que dejaron de perder tiempo" },
-      "weeks": { "value": "3", "suffix": "", "label": "Semanas hasta ver resultados" }
+      "market":  { "value": "88",  "suffix": "%", "display": "",           "label": "de las PyMEs españolas aún no usa IA",             "source": "ONTSI 2026" },
+      "payback": { "value": "0",   "suffix": "",  "display": "2–4 meses",  "label": "tiempo medio de recuperación de la inversión",      "source": "IDC España" },
+      "roi":     { "value": "250", "suffix": "%", "display": "",           "label": "ROI medio en 12 meses con automatización",          "source": "IDC España" },
+      "costs":   { "value": "40",  "suffix": "%", "display": "",           "label": "reducción de costes operativos con IA",             "source": "Federación Internacional" }
     }
   },
   "HowItWorks": {
@@ -68,6 +68,37 @@
       "consulting": {
         "title": "No sabes por dónde empezar con la IA",
         "description": "Te diseñamos una hoja de ruta clara para implementar IA donde más impacto tiene en tu negocio — sin tecnicismos, sin riesgos."
+      }
+    }
+  },
+  "RoiSector": {
+    "title": "ROI por sector",
+    "subtitle": "Cuánto tardan nuestros clientes en recuperar la inversión",
+    "paybackLabel": "Payback",
+    "items": {
+      "clinicas": {
+        "sector": "Clínicas y salud",
+        "problem": "No-shows y atención fuera de horario",
+        "result": "-80% no-shows, leads captados 24/7",
+        "payback": "30–60 días"
+      },
+      "agencias": {
+        "sector": "Agencias de marketing",
+        "problem": "Reportes y gestión manual de clientes",
+        "result": "15h/semana recuperadas por equipo",
+        "payback": "30–45 días"
+      },
+      "ecommerce": {
+        "sector": "E-commerce",
+        "problem": "Atención al cliente repetitiva",
+        "result": "70% consultas resueltas sin intervención",
+        "payback": "Mes 1"
+      },
+      "servicios": {
+        "sector": "Servicios profesionales",
+        "problem": "Tareas administrativas repetitivas",
+        "result": "-40% tiempo operativo en admin",
+        "payback": "45–60 días"
       }
     }
   },
@@ -181,7 +212,15 @@
     }
   },
   "Contact": {
-    "title": "Contacta con nosotros",
+    "title": "Deja de perder tiempo y clientes esta semana",
+    "subtitle": "En 30 minutos analizamos tu operación, identificamos dónde estás perdiendo más tiempo y te decimos exactamente qué automatizaríamos primero.",
+    "checks": [
+      "Diagnóstico inicial gratuito",
+      "Propuesta personalizada en 48h",
+      "Implementación en menos de 2 semanas",
+      "Soporte continuo incluido",
+      "Resultados medibles desde el mes 1"
+    ],
     "form": {
       "name": "Nombre",
       "email": "Correo Electrónico",
@@ -194,7 +233,7 @@
       "companyPlaceholder": "Tu empresa",
       "servicePlaceholder": "Selecciona un servicio",
       "messagePlaceholder": "¿En qué podemos ayudarte?",
-      "submit": "Enviar Mensaje",
+      "submit": "Agenda tu diagnóstico gratuito",
       "sending": "Enviando...",
       "success": "Mensaje enviado correctamente.",
       "error": "Hubo un error al enviar el mensaje.",

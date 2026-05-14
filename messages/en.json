@@ -21,10 +21,10 @@
   },
   "Stats": {
     "items": {
-      "automations": { "value": "50", "suffix": "+", "label": "Repetitive processes eliminated" },
-      "hours": { "value": "1200", "suffix": "+", "label": "Hours returned to teams" },
-      "clients": { "value": "20", "suffix": "+", "label": "Businesses that stopped wasting time" },
-      "weeks": { "value": "3", "suffix": "", "label": "Weeks to see results" }
+      "market":  { "value": "88",  "suffix": "%", "display": "",          "label": "of Spanish SMEs still don't use AI",                    "source": "ONTSI 2026" },
+      "payback": { "value": "0",   "suffix": "",  "display": "2–4 months","label": "average time to recover the investment",               "source": "IDC Spain" },
+      "roi":     { "value": "250", "suffix": "%", "display": "",          "label": "average ROI in 12 months with automation",             "source": "IDC Spain" },
+      "costs":   { "value": "40",  "suffix": "%", "display": "",          "label": "reduction in operational costs with AI",               "source": "International Federation" }
     }
   },
   "HowItWorks": {
@@ -68,6 +68,37 @@
       "consulting": {
         "title": "You don't know where to start with AI",
         "description": "We build you a clear roadmap to implement AI where it has the most impact in your specific business — no jargon, no risk."
+      }
+    }
+  },
+  "RoiSector": {
+    "title": "ROI by sector",
+    "subtitle": "How quickly our clients recover their investment",
+    "paybackLabel": "Payback",
+    "items": {
+      "clinicas": {
+        "sector": "Clinics & healthcare",
+        "problem": "No-shows and after-hours inquiries",
+        "result": "-80% no-shows, leads captured 24/7",
+        "payback": "30–60 days"
+      },
+      "agencias": {
+        "sector": "Marketing agencies",
+        "problem": "Reports and manual client management",
+        "result": "15h/week recovered per team",
+        "payback": "30–45 days"
+      },
+      "ecommerce": {
+        "sector": "E-commerce",
+        "problem": "Repetitive customer support",
+        "result": "70% queries resolved without intervention",
+        "payback": "Month 1"
+      },
+      "servicios": {
+        "sector": "Professional services",
+        "problem": "Repetitive administrative tasks",
+        "result": "-40% operational time on admin",
+        "payback": "45–60 days"
       }
     }
   },
@@ -181,7 +212,15 @@
     }
   },
   "Contact": {
-    "title": "Contact Us",
+    "title": "Stop losing time and clients this week",
+    "subtitle": "In 30 minutes we analyse your operation, identify where you're losing the most time, and tell you exactly what we'd automate first.",
+    "checks": [
+      "Free initial diagnosis",
+      "Personalised proposal in 48h",
+      "Live in less than 2 weeks",
+      "Ongoing support included",
+      "Measurable results from month 1"
+    ],
     "form": {
       "name": "Name",
       "email": "Email",
@@ -194,7 +233,7 @@
       "companyPlaceholder": "Your company",
       "servicePlaceholder": "Select a service",
       "messagePlaceholder": "How can we help you?",
-      "submit": "Send Message",
+      "submit": "Book your free diagnosis",
       "sending": "Sending...",
       "success": "Message sent successfully.",
       "error": "There was an error sending the message.",
