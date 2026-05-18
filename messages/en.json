@@ -20,11 +20,13 @@
     "label": "Technologies we master"
   },
   "Stats": {
+    "heading": "The market confirms it",
+    "subheading": "Data from independent bodies on the real impact of AI on SMEs",
     "items": {
-      "market":  { "value": "88",  "suffix": "%", "display": "",          "label": "of Spanish SMEs still don't use AI",                    "source": "ONTSI 2026" },
-      "payback": { "value": "0",   "suffix": "",  "display": "2–4 months","label": "average time to recover the investment",               "source": "IDC Spain" },
-      "roi":     { "value": "250", "suffix": "%", "display": "",          "label": "average ROI in 12 months with automation",             "source": "IDC Spain" },
-      "costs":   { "value": "40",  "suffix": "%", "display": "",          "label": "reduction in operational costs with AI",               "source": "International Federation" }
+      "market":  { "value": "88",  "suffix": "%", "display": "",          "label": "of Spanish SMEs still don't use AI",            "source": "ONTSI 2026",               "sourceUrl": "https://www.ontsi.es" },
+      "payback": { "value": "0",   "suffix": "",  "display": "2–4 months","label": "average time to recover the investment",        "source": "IDC Spain",                "sourceUrl": "https://www.idc.com/es" },
+      "roi":     { "value": "250", "suffix": "%", "display": "",          "label": "average ROI in 12 months with automation",      "source": "IDC Spain",                "sourceUrl": "https://www.idc.com/es" },
+      "costs":   { "value": "40",  "suffix": "%", "display": "",          "label": "reduction in operational costs with AI",        "source": "McKinsey Global Institute", "sourceUrl": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights" }
     }
   },
   "HowItWorks": {
@@ -73,7 +75,8 @@
   },
   "RoiSector": {
     "title": "ROI by sector",
-    "subtitle": "How quickly our clients recover their investment",
+    "subtitle": "Industry benchmarks by sector — based on European market averages",
+    "disclaimer": "* Data based on industry averages. Individual results vary depending on the project.",
     "paybackLabel": "Payback",
     "items": {
       "clinicas": {
@@ -203,7 +206,7 @@
       },
       "q7": {
         "q": "What is NOT automating actually costing me?",
-        "a": "More than you think. If a repetitive task takes 5 hours a week for someone earning €20/h, that's €400/month — nearly €5,000/year — in work an automation does by itself. And that doesn't count errors, delays, and opportunities lost because your team has no time. Projects start from €499, and ROI is usually visible in the first month. In the audit we calculate the real cost of inaction together, before you decide anything."
+        "a": "More than you think. If a repetitive task takes 5 hours a week for someone earning €20/h, that's €400/month — nearly €5,000/year — in work an automation does by itself. And that doesn't count errors, delays, and opportunities lost because your team has no time. Projects start from €1,500, and ROI is usually visible in the first month. In the audit we calculate the real cost of inaction together, before you decide anything."
       },
       "q8": {
         "q": "What tools and platforms do you use?",

@@ -27,7 +27,7 @@ export default function RoiSector() {
           </p>
         </m.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {sectorKeys.map((key, index) => (
             <m.div
               key={key}
@@ -69,6 +69,10 @@ export default function RoiSector() {
             </m.div>
           ))}
         </div>
+
+        <p className="text-center text-[11px] text-muted-foreground/40">
+          {t('disclaimer')}
+        </p>
       </div>
     </section>
   );

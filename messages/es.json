@@ -20,11 +20,13 @@
     "label": "Tecnologías que dominamos"
   },
   "Stats": {
+    "heading": "El mercado lo confirma",
+    "subheading": "Datos de organismos independientes sobre el impacto real de la IA en PyMEs",
     "items": {
-      "market":  { "value": "88",  "suffix": "%", "display": "",           "label": "de las PyMEs españolas aún no usa IA",             "source": "ONTSI 2026" },
-      "payback": { "value": "0",   "suffix": "",  "display": "2–4 meses",  "label": "tiempo medio de recuperación de la inversión",      "source": "IDC España" },
-      "roi":     { "value": "250", "suffix": "%", "display": "",           "label": "ROI medio en 12 meses con automatización",          "source": "IDC España" },
-      "costs":   { "value": "40",  "suffix": "%", "display": "",           "label": "reducción de costes operativos con IA",             "source": "Federación Internacional" }
+      "market":  { "value": "88",  "suffix": "%", "display": "",           "label": "de las PyMEs españolas aún no usa IA",             "source": "ONTSI 2026",              "sourceUrl": "https://www.ontsi.es" },
+      "payback": { "value": "0",   "suffix": "",  "display": "2–4 meses",  "label": "tiempo medio de recuperación de la inversión",      "source": "IDC España",              "sourceUrl": "https://www.idc.com/es" },
+      "roi":     { "value": "250", "suffix": "%", "display": "",           "label": "ROI medio en 12 meses con automatización",          "source": "IDC España",              "sourceUrl": "https://www.idc.com/es" },
+      "costs":   { "value": "40",  "suffix": "%", "display": "",           "label": "reducción de costes operativos con IA",             "source": "McKinsey Global Institute","sourceUrl": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights" }
     }
   },
   "HowItWorks": {
@@ -73,7 +75,8 @@
   },
   "RoiSector": {
     "title": "ROI por sector",
-    "subtitle": "Cuánto tardan nuestros clientes en recuperar la inversión",
+    "subtitle": "Benchmarks de industria por sector — basados en medias del mercado europeo",
+    "disclaimer": "* Datos basados en medias de industria. Los resultados individuales varían según el proyecto.",
     "paybackLabel": "Payback",
     "items": {
       "clinicas": {
@@ -203,7 +206,7 @@
       },
       "q7": {
         "q": "¿Cuánto me está costando NO automatizar?",
-        "a": "Más de lo que crees. Si una tarea repetitiva le ocupa 5 horas semanales a alguien que cobra 20€/h, son 400€/mes — casi 5.000€ al año — en trabajo que una automatización hace sola. Y eso sin contar errores, retrasos y oportunidades perdidas por falta de tiempo. Los proyectos parten desde 499€, y el retorno suele verse en el primer mes. En la auditoría calculamos juntos el coste real de no actuar, antes de que decidas nada."
+        "a": "Más de lo que crees. Si una tarea repetitiva le ocupa 5 horas semanales a alguien que cobra 20€/h, son 400€/mes — casi 5.000€ al año — en trabajo que una automatización hace sola. Y eso sin contar errores, retrasos y oportunidades perdidas por falta de tiempo. Los proyectos parten desde 1.500€, y el retorno suele verse en el primer mes. En la auditoría calculamos juntos el coste real de no actuar, antes de que decidas nada."
       },
       "q8": {
         "q": "¿Qué herramientas y plataformas usáis?",
