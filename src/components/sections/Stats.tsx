@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, memo } from 'react';
 import { useTranslations } from 'next-intl';
 import { m, useInView, useMotionValue, useSpring } from 'framer-motion';
 
-function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string }) {
+const AnimatedNumber = memo(function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
   const spring = useSpring(motionValue, { duration: 2000, bounce: 0 });
@@ -21,7 +21,7 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
   }, [spring, suffix]);
 
   return <span ref={ref}>0{suffix}</span>;
-}
+});
 
 const statKeys = ['market', 'payback', 'roi', 'costs'] as const;
 

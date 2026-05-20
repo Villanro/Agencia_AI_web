@@ -19,6 +19,22 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://themkn.es';
 
+// Partes estáticas del schema — hoistadas fuera del render
+const ORG_SCHEMA_BASE = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'The MKN',
+  email: 'hola@themkn.com',
+  areaServed: { '@type': 'Country', name: 'Spain' },
+  serviceType: ['AI Automation', 'AI Agents', 'API Integration', 'AI Consulting'],
+  knowsLanguage: ['es', 'en'],
+} as const;
+
+const ORG_DESCRIPTIONS = {
+  en: 'AI and automation agency. We transform manual processes into intelligent workflows.',
+  es: 'Agencia de IA y automatización. Transformamos procesos manuales en flujos inteligentes.',
+} as const;
+
 type LocaleLayoutProps = {
   children: React.ReactNode;
   params: { locale: string };
@@ -77,18 +93,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'The MKN',
+    ...ORG_SCHEMA_BASE,
     url: `${BASE_URL}/${locale}`,
-    email: 'hola@themkn.com',
-    description:
-      locale === 'en'
-        ? 'AI and automation agency. We transform manual processes into intelligent workflows.'
-        : 'Agencia de IA y automatización. Transformamos procesos manuales en flujos inteligentes.',
-    areaServed: { '@type': 'Country', name: 'Spain' },
-    serviceType: ['AI Automation', 'AI Agents', 'API Integration', 'AI Consulting'],
-    knowsLanguage: ['es', 'en'],
+    description: ORG_DESCRIPTIONS[locale as keyof typeof ORG_DESCRIPTIONS] ?? ORG_DESCRIPTIONS.es,
   };
 
   return (

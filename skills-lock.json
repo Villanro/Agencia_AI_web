@@ -42,6 +42,18 @@
       "sourceType": "github",
       "skillPath": "skills/best-practices/SKILL.md",
       "computedHash": "432875ade263e2509fa6888ebc5cf6c65f93074be73924ad6cceb7ec3ba9ccef"
+    },
+    "react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355"
+    },
+    "vercel-optimize": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vercel-optimize/SKILL.md",
+      "computedHash": "4a027dd42eee0bc3a857539ea2b59ff55d4ee5ecb75229dd79bb6f79a3bfa15b"
     }
   }
 }

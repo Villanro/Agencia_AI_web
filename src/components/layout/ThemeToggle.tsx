@@ -2,26 +2,19 @@
 
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return <div className="size-9" />;
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       className="size-9 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
       aria-label="Cambiar tema"
+      suppressHydrationWarning
     >
-      {theme === 'dark'
-        ? <Sun className="size-4" />
-        : <Moon className="size-4" />
-      }
+      <Sun className="size-4 dark:hidden" />
+      <Moon className="size-4 hidden dark:block" />
     </button>
   );
 }

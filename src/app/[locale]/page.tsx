@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
 import Hero from '@/components/sections/Hero';
 import TechStack from '@/components/sections/TechStack';
 import Stats from '@/components/sections/Stats';
@@ -8,7 +9,10 @@ import Services from '@/components/sections/Services';
 import RoiSector from '@/components/sections/RoiSector';
 import FAQ from '@/components/sections/FAQ';
 import ContactForm from '@/components/sections/ContactForm';
-import ChatWidget from '@/components/widgets/ChatWidget';
+
+const ChatWidget = dynamic(() => import('@/components/widgets/ChatWidget'), {
+  ssr: false,
+});
 
 const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'] as const;
 
