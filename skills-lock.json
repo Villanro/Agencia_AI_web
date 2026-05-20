@@ -6,6 +6,42 @@
       "sourceType": "github",
       "skillPath": "skills/scroll-experience/SKILL.md",
       "computedHash": "585612d4791ec9d05843661ce0995d2e65ae18585f5c55287412ee5eb7ca40a7"
+    },
+    "web-quality-audit": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-quality-audit/SKILL.md",
+      "computedHash": "b39c62f24e6eea1ffb517924b738f052f3888f32a8a5ca3cf348c1b33aeea291"
+    },
+    "performance": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/performance/SKILL.md",
+      "computedHash": "f2e2a354e2ccb0b1b177872b7683e429ca6b79642e4aaac374859a9aefa40f25"
+    },
+    "core-web-vitals": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/core-web-vitals/SKILL.md",
+      "computedHash": "6129e8dfdb38965242c0d11e4af6a7670c50484ddfe335d07ce3f4ec636d8ffb"
+    },
+    "accessibility": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/accessibility/SKILL.md",
+      "computedHash": "e7193cfa7082217ef89d9dd942c06e578774c0a52808703417e4d83fd3b3104c"
+    },
+    "seo": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/seo/SKILL.md",
+      "computedHash": "a06ca86d0b0cc75982ee10651bd7398c0242a13d91d3b4c8eae0bf1360d18b92"
+    },
+    "best-practices": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/best-practices/SKILL.md",
+      "computedHash": "432875ade263e2509fa6888ebc5cf6c65f93074be73924ad6cceb7ec3ba9ccef"
     }
   }
 }

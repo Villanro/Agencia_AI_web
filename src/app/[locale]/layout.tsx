@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import '../globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import MotionProvider from '@/components/MotionProvider';
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
     : 'The MKN - Agencia de IA y Automatizacion';
   const description = isEn
     ? 'We transform manual processes into intelligent workflows with AI and automation.'
-    : 'Transformamos procesos manuales en flujos inteligentes con IA y automatizacion.';
+    : 'Transformamos procesos manuales en flujos inteligentes con IA y automatización.';
   const canonical = `${BASE_URL}/${params.locale}`;
 
   return {
@@ -75,15 +76,41 @@ export default async function LocaleLayout({
 }: LocaleLayoutProps) {
   const messages = await getMessages();
 
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'The MKN',
+    url: `${BASE_URL}/${locale}`,
+    email: 'hola@themkn.com',
+    description:
+      locale === 'en'
+        ? 'AI and automation agency. We transform manual processes into intelligent workflows.'
+        : 'Agencia de IA y automatización. Transformamos procesos manuales en flujos inteligentes.',
+    areaServed: { '@type': 'Country', name: 'Spain' },
+    serviceType: ['AI Automation', 'AI Agents', 'API Integration', 'AI Consulting'],
+    knowsLanguage: ['es', 'en'],
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.className} ${plusJakarta.variable} min-h-screen bg-background antialiased flex flex-col`}>
+        <Script
+          id="ld-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             <MotionProvider>
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:font-medium"
+              >
+                Saltar al contenido principal
+              </a>
               <ScrollProgress />
               <Navbar />
-              <main className="flex-1">
+              <main id="main-content" className="flex-1">
                 {children}
               </main>
               <Footer />

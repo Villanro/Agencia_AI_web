@@ -106,7 +106,7 @@ export default function Footer() {
             <p className="text-sm font-semibold text-foreground uppercase tracking-wider">
               {t('Footer.nav')}
             </p>
-            <nav className="flex flex-col gap-3">
+            <nav aria-label="Navegación secundaria" className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

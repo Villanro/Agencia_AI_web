@@ -4,7 +4,27 @@ const N8N_URL = process.env.N8N_CHAT_WEBHOOK_URL ?? '';
 
 export const maxDuration = 30;
 
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 10;
+const requestHistoryByIp = new Map<string, number[]>();
+
+function getClientIp(req: NextRequest) {
+  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? req.ip ?? 'unknown';
+}
+
+function isRateLimited(ip: string, now: number) {
+  const hits = requestHistoryByIp.get(ip) ?? [];
+  const recent = hits.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  if (recent.length >= RATE_LIMIT_MAX_REQUESTS) return true;
+  recent.push(now);
+  requestHistoryByIp.set(ip, recent);
+  return false;
+}
+
 export async function POST(req: NextRequest) {
+  if (isRateLimited(getClientIp(req), Date.now())) {
+    return NextResponse.json({ reply: 'Demasiadas solicitudes. Espera un momento.' }, { status: 429 });
+  }
   if (!N8N_URL) {
     return NextResponse.json(
       { reply: 'El agente no está configurado todavía.' },

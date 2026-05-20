@@ -95,7 +95,7 @@ export default function ChatWidget() {
                   </div>
                 </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors">
+              <button onClick={() => setIsOpen(false)} aria-label="Cerrar chat" className="text-muted-foreground hover:text-foreground transition-colors">
                 <X className="size-5" />
               </button>
             </div>
@@ -151,6 +151,8 @@ export default function ChatWidget() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? 'Cerrar chat' : 'Abrir chat con Nova'}
+        aria-expanded={isOpen}
         className="fixed bottom-6 right-6 size-14 bg-primary text-primary-foreground rounded-full shadow-xl flex items-center justify-center z-50 hover:bg-primary/90 transition-colors"
       >
         {isOpen ? <X className="size-6" /> : <MessageSquare className="size-6" />}
